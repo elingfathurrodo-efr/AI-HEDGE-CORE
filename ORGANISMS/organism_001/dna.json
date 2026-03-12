@@ -1,4 +1,11 @@
 {
-  "strategy": "breakout",
-  "risk": 0.01
+  "symbol_priority": "XAUUSD",
+  "timeframe": "M1",
+  "max_risk_per_trade": 0.02,
+  "max_layers": 12,
+  "min_layer_distance_points": 50,
+  "trailing_start_ratio": 0.10,
+  "trailing_max_ratio": 0.95,
+  "no_hedging": true,
+  "one_entry_per_candle": true
 }
