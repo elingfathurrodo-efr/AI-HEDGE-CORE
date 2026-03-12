@@ -1,24 +1,31 @@
 import json
 import random
 import os
+from datetime import datetime
 
-signal_file = "DATA/signal.json"
+signal_path = "AI_CLOUD/data/signal.json"
 
-symbol = "XAUUSD"
+symbols = ["XAUUSD","EURUSD","GBPUSD","USDJPY"]
 
-actions = ["BUY","SELL"]
+actions = ["BUY","SELL","WAIT"]
+
+symbol = random.choice(symbols)
 
 action = random.choice(actions)
+
+confidence = round(random.uniform(0.5,0.9),2)
 
 signal = {
     "symbol": symbol,
     "action": action,
-    "lot": 0.01
+    "confidence": confidence,
+    "lot": 0.01,
+    "timestamp": str(datetime.utcnow())
 }
 
-os.makedirs("DATA", exist_ok=True)
+os.makedirs("AI_CLOUD/data", exist_ok=True)
 
-with open(signal_file,"w") as f:
+with open(signal_path,"w") as f:
     json.dump(signal,f,indent=2)
 
-print("AI generated signal:",signal)
+print("AI SIGNAL:",signal)
