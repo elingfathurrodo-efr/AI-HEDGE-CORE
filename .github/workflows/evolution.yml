@@ -3,28 +3,29 @@ name: AI Evolution
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/15 * * * *"
 
 jobs:
   evolve:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - name: Run AI evolution
-        run: python EVOLUTION/evolve.py
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
 
-      - name: Commit signal update
-        run: |
-          git config --global user.name "AI"
-          git config --global user.email "ai@bot.com"
-          git add DATA/signal.json
-          git commit -m "AI updated signal"
-          git push
+    - name: Run AI evolution
+      run: python AI_CLOUD/evolve.py
+
+    - name: Commit signal
+      run: |
+        git config --global user.name "AI_BOT"
+        git config --global user.email "ai@bot.com"
+        git add AI_CLOUD/data/signal.json
+        git commit -m "AI updated signal" || echo "no change"
+        git push
