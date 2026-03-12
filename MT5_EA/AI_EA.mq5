@@ -4,55 +4,79 @@
 
 CTrade trade;
 
-input double LotSize = 0.01;
-input int Magic = 777;
+input double Lot = 0.01;
+input int LayerDistance = 50;
+
+datetime lastCandle=0;
 
 string ReadSignal()
 {
    int file=FileOpen("signal.json",FILE_READ|FILE_TXT|FILE_COMMON);
 
    if(file==INVALID_HANDLE)
-      return "NONE";
+      return "WAIT";
 
-   string text=FileReadString(file);
+   string txt=FileReadString(file);
+
    FileClose(file);
 
-   if(StringFind(text,"BUY")>=0)
-      return "BUY";
+   if(StringFind(txt,"BUY")>=0) return "BUY";
+   if(StringFind(txt,"SELL")>=0) return "SELL";
 
-   if(StringFind(text,"SELL")>=0)
-      return "SELL";
-
-   return "NONE";
+   return "WAIT";
 }
 
 bool PositionExists()
 {
    for(int i=0;i<PositionsTotal();i++)
    {
-      if(PositionGetSymbol(i)==Symbol())
-         return true;
+      ulong ticket=PositionGetTicket(i);
+
+      if(PositionSelectByTicket(ticket))
+      {
+         if(PositionGetString(POSITION_SYMBOL)==Symbol())
+            return true;
+      }
    }
+
+   return false;
+}
+
+bool LayerAllowed()
+{
+   double last_price=0;
+
+   for(int i=0;i<PositionsTotal();i++)
+   {
+      ulong ticket=PositionGetTicket(i);
+
+      if(PositionSelectByTicket(ticket))
+      {
+         last_price=PositionGetDouble(POSITION_PRICE_OPEN);
+      }
+   }
+
+   if(last_price==0) return true;
+
+   if(MathAbs(SymbolInfoDouble(Symbol(),SYMBOL_BID)-last_price) > LayerDistance*_Point)
+      return true;
 
    return false;
 }
 
 void OnTick()
 {
-   static datetime lastCandle=0;
-
    datetime candle=iTime(Symbol(),PERIOD_M1,0);
 
-   if(candle==lastCandle)
-      return;
+   if(candle==lastCandle) return;
 
    lastCandle=candle;
 
    string signal=ReadSignal();
 
-   if(signal=="BUY" && !PositionExists())
-      trade.Buy(LotSize,Symbol());
+   if(signal=="BUY" && LayerAllowed())
+      trade.Buy(Lot);
 
-   if(signal=="SELL" && !PositionExists())
-      trade.Sell(LotSize,Symbol());
+   if(signal=="SELL" && LayerAllowed())
+      trade.Sell(Lot);
 }
