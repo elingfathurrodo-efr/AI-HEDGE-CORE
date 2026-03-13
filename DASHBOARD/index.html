@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧬 AI Trading Organism - Living Dashboard</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000510; color:#00ffcc; font-family:'Courier New',monospace; overflow-x:hidden; }
+
+#header {
+  background: linear-gradient(90deg, #000510 0%, #001530 50%, #000510 100%);
+  border-bottom: 1px solid #003366;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header h1 { font-size: 1.2rem; color: #00ffcc; text-shadow: 0 0 20px #00ffcc; }
+#header .status-dot { width:10px;height:10px;border-radius:50%;background:#00ff88;
+  box-shadow:0 0 8px #00ff88; animation:pulse 1s infinite; display:inline-block; margin-right:8px; }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+@keyframes glow  { 0%,100%{text-shadow:0 0 10px #00ffcc} 50%{text-shadow:0 0 30px #00ffcc,0 0 60px #0088ff} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes rotate3d { from{transform:rotateY(0deg)} to{transform:rotateY(360deg)} }
+@keyframes dna-spin { from{transform:rotateX(0deg) rotateZ(0deg)} to{transform:rotateX(360deg) rotateZ(180deg)} }
+
+#main-layout { display:grid; grid-template-columns:1fr 380px; height:calc(100vh - 52px); }
+
+/* === AVATAR CANVAS === */
+#avatar-section {
+  position:relative;
+  background: radial-gradient(ellipse at center, #001020 0%, #000508 100%);
+  overflow:hidden;
+}
+#avatar-canvas { width:100%; height:100%; }
+
+#avatar-mood {
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  font-size:1.4rem; color:#00ffcc; text-shadow:0 0 20px #00ffcc;
+  animation:glow 2s ease-in-out infinite;
+  text-align:center;
+}
+#avatar-name {
+  position:absolute; top:20px; left:50%; transform:translateX(-50%);
+  font-size:1rem; color:#0088ff; letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* === RIGHT PANEL === */
+#right-panel {
+  background:#000c1a;
+  border-left: 1px solid #003366;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+.panel-section {
+  border-bottom: 1px solid #002244;
+  padding: 14px 16px;
+}
+.panel-section h3 {
+  color:#0088ff;
+  font-size:0.75rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+  border-bottom:1px solid #001a33;
+  padding-bottom:6px;
+}
+
+.stat-row { display:flex; justify-content:space-between; margin-bottom:5px; font-size:0.8rem; }
+.stat-label { color:#668899; }
+.stat-value { color:#00ffcc; font-weight:bold; }
+.stat-value.buy  { color:#00ff88; }
+.stat-value.sell { color:#ff4466; }
+.stat-value.none { color:#556677; }
+.stat-value.gold { color:#ffcc00; }
+
+/* Signal badge */
+#signal-badge {
+  display:inline-block;
+  padding:8px 24px;
+  border-radius:4px;
+  font-size:1.1rem;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-align:center;
+  width:100%;
+  margin-bottom:8px;
+  transition:all 0.3s;
+}
+#signal-badge.BUY  { background:#003322; color:#00ff88; border:1px solid #00ff88; box-shadow:0 0 15px #00ff8844; }
+#signal-badge.SELL { background:#330011; color:#ff4466; border:1px solid #ff4466; box-shadow:0 0 15px #ff446644; }
+#signal-badge.NONE { background:#111; color:#556677; border:1px solid #333; }
+
+/* Progress bar */
+.progress-bar { height:6px; background:#001122; border-radius:3px; overflow:hidden; margin:4px 0; }
+.progress-fill { height:100%; border-radius:3px; transition:width 0.5s ease; }
+.progress-fill.profit { background:linear-gradient(90deg, #003366, #00ffcc); }
+.progress-fill.risk   { background:linear-gradient(90deg, #330022, #ff4466); }
+
+/* Organisms list */
+#organism-list { max-height:180px; overflow-y:auto; }
+.organism-item {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:6px 8px; margin-bottom:4px;
+  background:#001122; border-radius:4px;
+  border-left:3px solid #003366;
+  font-size:0.75rem;
+  cursor:pointer;
+  transition:all 0.2s;
+}
+.organism-item:hover { background:#001833; border-left-color:#0088ff; }
+.organism-item.best  { border-left-color:#00ffcc; }
+.organism-score { color:#ffcc00; }
+.organism-gen   { color:#668899; font-size:0.65rem; }
+
+/* Evolution log */
+#evo-log { max-height:150px; overflow-y:auto; font-size:0.7rem; color:#446688; }
+.evo-entry { padding:3px 0; border-bottom:1px solid #001122; }
+.evo-entry .time { color:#334455; }
+.evo-entry .event { color:#557799; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:#000c1a; }
+::-webkit-scrollbar-thumb { background:#003366; border-radius:2px; }
+
+/* DNA strand animation */
+#dna-overlay {
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  opacity:0.4;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #main-layout { grid-template-columns:1fr; grid-template-rows:60vh 1fr; }
+  #right-panel { max-height:40vh; }
+}
+
+/* Connection indicator */
+#connection-bar {
+  position:fixed; bottom:0; left:0; right:0;
+  background:#000c1a;
+  border-top:1px solid #003366;
+  padding:4px 16px;
+  font-size:0.65rem;
+  color:#334455;
+  display:flex;
+  justify-content:space-between;
+  z-index:100;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1><span class="status-dot"></span>🧬 AI Trading Organism</h1>
+  <div style="font-size:0.75rem;color:#446688;" id="header-time">Loading...</div>
+  <div style="font-size:0.75rem;color:#0088ff;" id="header-session">Session: --</div>
+</div>
+
+<div id="main-layout">
+
+  <!-- AVATAR SECTION -->
+  <div id="avatar-section">
+    <canvas id="avatar-canvas"></canvas>
+    <div id="avatar-name">TRADING ORGANISM</div>
+    <div id="avatar-mood">🧬 Initializing...</div>
+    <div id="dna-overlay">
+      <canvas id="dna-canvas" width="60" height="300"></canvas>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div id="right-panel">
+
+    <!-- Signal -->
+    <div class="panel-section">
+      <h3>📡 Current Signal</h3>
+      <div id="signal-badge" class="NONE">⏸ NONE</div>
+      <div class="stat-row">
+        <span class="stat-label">Reason</span>
+        <span class="stat-value" id="signal-reason" style="max-width:200px;text-align:right;font-size:0.7rem;">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Organism</span>
+        <span class="stat-value" id="signal-organism">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Session</span>
+        <span class="stat-value" id="signal-session">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Updated</span>
+        <span class="stat-value" id="signal-time" style="font-size:0.7rem;">--</span>
+      </div>
+    </div>
+
+    <!-- Evolution Stats -->
+    <div class="panel-section">
+      <h3>🧬 Evolution Status</h3>
+      <div class="stat-row">
+        <span class="stat-label">Active Organisms</span>
+        <span class="stat-value" id="stat-organisms">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Best Organism</span>
+        <span class="stat-value" id="stat-best-org">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Best Score</span>
+        <span class="stat-value gold" id="stat-best-score">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Last Evolution</span>
+        <span class="stat-value" id="stat-last-evo" style="font-size:0.7rem;">--</span>
+      </div>
+    </div>
+
+    <!-- Organisms List -->
+    <div class="panel-section">
+      <h3>🔬 Organism Registry</h3>
+      <div id="organism-list">
+        <div style="color:#334455;font-size:0.75rem;">Loading organisms...</div>
+      </div>
+    </div>
+
+    <!-- DNA Info -->
+    <div class="panel-section">
+      <h3>🔒 DNA Core (Immutable)</h3>
+      <div class="stat-row">
+        <span class="stat-label">Ghost SL</span>
+        <span class="stat-value">✅ Active</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Trailing Lock</span>
+        <span class="stat-value">10% → 90%</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Capital 2x Rule</span>
+        <span class="stat-value">✅ Active</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Strategies</span>
+        <span class="stat-value">7 Core</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Anti-Stacking</span>
+        <span class="stat-value">✅ 150p+</span>
+      </div>
+    </div>
+
+    <!-- Evolution Log -->
+    <div class="panel-section">
+      <h3>📜 Evolution Log</h3>
+      <div id="evo-log">
+        <div class="evo-entry"><span class="event">Waiting for evolution data...</span></div>
+      </div>
+    </div>
+
+  </div><!-- /right-panel -->
+</div><!-- /main-layout -->
+
+<div id="connection-bar">
+  <span>🔗 GitHub: <span id="conn-status">Connecting...</span></span>
+  <span>⚡ MT5: Signal-only mode</span>
+  <span id="conn-time">--</span>
+</div>
+
+<!-- THREE.JS CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// ============================================================
+// CONFIGURATION - UPDATE THESE FOR YOUR GITHUB REPO
+// ============================================================
+const GITHUB_USER   = "YOUR_USERNAME";
+const GITHUB_REPO   = "YOUR_REPO";
+const SIGNAL_URL    = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/signal.json`;
+const STATUS_URL    = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/MEMORY/status.json`;
+const EVO_LOG_URL   = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/MEMORY/evolution_log.json`;
+const FETCH_INTERVAL = 30000;  // 30 seconds
+
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  signal: "NONE",
+  mood: "idle",        // idle, profit, loss, learning, evolving
+  organisms: [],
+  bestOrganism: null,
+  evolutionGen: 0,
+  lastUpdate: null
+};
+
+// ============================================================
+// THREE.JS AVATAR - Living Creature
+// ============================================================
+const canvas    = document.getElementById('avatar-canvas');
+const renderer  = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+const scene     = new THREE.Scene();
+const camera    = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+camera.position.set(0, 0, 5);
+
+renderer.setSize(canvas.offsetWidth || 600, canvas.offsetHeight || 500);
+renderer.setClearColor(0x000000, 0);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0x002244, 2);
+scene.add(ambientLight);
+const pointLight1 = new THREE.PointLight(0x0088ff, 3, 20);
+pointLight1.position.set(3, 3, 3);
+scene.add(pointLight1);
+const pointLight2 = new THREE.PointLight(0x00ffcc, 2, 20);
+pointLight2.position.set(-3, -2, 2);
+scene.add(pointLight2);
+
+// === AVATAR BODY - Organic sphere that morphs ===
+const bodyGeo  = new THREE.IcosahedronGeometry(1.2, 4);
+const bodyMat  = new THREE.MeshPhongMaterial({
+  color: 0x003366,
+  emissive: 0x001133,
+  wireframe: false,
+  transparent: true,
+  opacity: 0.85,
+  shininess: 100
+});
+const bodyMesh = new THREE.Mesh(bodyGeo, bodyMat);
+scene.add(bodyMesh);
+
+// Wireframe overlay
+const wireMat  = new THREE.MeshBasicMaterial({ color:0x0088ff, wireframe:true, transparent:true, opacity:0.3 });
+const wireMesh = new THREE.Mesh(bodyGeo.clone(), wireMat);
+scene.add(wireMesh);
+
+// === ORBIT PARTICLES (DNA strands / neurons) ===
+const particles = [];
+const particleCount = 60;
+const particleGeo   = new THREE.SphereGeometry(0.04, 4, 4);
+const particleMat   = new THREE.MeshBasicMaterial({ color: 0x00ffcc });
+
+for(let i = 0; i < particleCount; i++) {
+  const p = new THREE.Mesh(particleGeo, particleMat.clone());
+  const theta = (i / particleCount) * Math.PI * 2;
+  const phi   = Math.random() * Math.PI;
+  const r     = 1.8 + Math.random() * 0.6;
+  p.position.set(
+    r * Math.sin(phi) * Math.cos(theta),
+    r * Math.sin(phi) * Math.sin(theta),
+    r * Math.cos(phi)
+  );
+  p.userData = { theta, phi, r, speed: 0.3 + Math.random() * 0.7, orbitAxis: Math.random() * Math.PI * 2 };
+  scene.add(p);
+  particles.push(p);
+}
+
+// === CORE GLOW ===
+const glowGeo  = new THREE.SphereGeometry(0.5, 16, 16);
+const glowMat  = new THREE.MeshBasicMaterial({ color:0x0044aa, transparent:true, opacity:0.6 });
+const glowMesh = new THREE.Mesh(glowGeo, glowMat);
+scene.add(glowMesh);
+
+// Original vertex positions for morphing
+const origPositions = bodyGeo.attributes.position.array.slice();
+
+// ============================================================
+// ANIMATION LOOP
+// ============================================================
+let clock = new THREE.Clock();
+let moodIntensity = 0;
+
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  // Body rotation
+  bodyMesh.rotation.y  = t * 0.2;
+  bodyMesh.rotation.x  = Math.sin(t * 0.15) * 0.3;
+  wireMesh.rotation.y  = t * 0.22;
+  wireMesh.rotation.x  = Math.sin(t * 0.17) * 0.3;
+
+  // Morph body based on mood
+  const pos = bodyGeo.attributes.position;
+  for(let i = 0; i < pos.count; i++) {
+    const ox = origPositions[i*3], oy = origPositions[i*3+1], oz = origPositions[i*3+2];
+    let noise = Math.sin(ox*3 + t*1.5) * Math.cos(oy*3 + t*1.2) * Math.sin(oz*3 + t) * 0.08;
+    
+    if(state.mood === 'profit') {
+      noise = Math.abs(Math.sin(t*3 + i*0.1)) * 0.25;
+      bodyMat.color.setHex(0x003322);
+      bodyMat.emissive.setHex(0x002211);
+      pointLight2.color.setHex(0x00ff88);
+    } else if(state.mood === 'loss') {
+      noise = Math.sin(t*5 + i*0.2) * 0.1;
+      bodyMat.color.setHex(0x330011);
+      bodyMat.emissive.setHex(0x220008);
+      pointLight2.color.setHex(0xff2244);
+    } else if(state.mood === 'evolving') {
+      noise = Math.sin(t*4 + i*0.3) * 0.3;
+      bodyMat.color.setHex(0x002233);
+      bodyMat.emissive.setHex(0x001122);
+      pointLight1.color.setHex(0xffcc00);
+    } else {
+      bodyMat.color.setHex(0x002244);
+      bodyMat.emissive.setHex(0x001133);
+      pointLight1.color.setHex(0x0088ff);
+      pointLight2.color.setHex(0x00ffcc);
+    }
+    
+    pos.setXYZ(i, ox + ox*noise, oy + oy*noise, oz + oz*noise);
+  }
+  pos.needsUpdate = true;
+  bodyGeo.computeVertexNormals();
+
+  // Particle orbit
+  particles.forEach((p, i) => {
+    const ud  = p.userData;
+    ud.theta += 0.008 * ud.speed;
+    const r  = ud.r + Math.sin(t * 0.5 + i) * 0.1;
+    p.position.x = r * Math.sin(ud.phi) * Math.cos(ud.theta + ud.orbitAxis);
+    p.position.y = r * Math.sin(ud.phi) * Math.sin(ud.theta + ud.orbitAxis);
+    p.position.z = r * Math.cos(ud.phi);
+    const alpha = 0.4 + Math.sin(t + i * 0.3) * 0.4;
+    p.material.opacity = alpha;
+    p.material.transparent = true;
+  });
+
+  // Glow pulse
+  const glowScale = 1 + Math.sin(t * 2) * 0.3;
+  glowMesh.scale.setScalar(glowScale);
+  glowMat.opacity = 0.3 + Math.sin(t * 2) * 0.2;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+// Resize handler
+window.addEventListener('resize', () => {
+  const w = canvas.offsetWidth, h = canvas.offsetHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+});
+
+// ============================================================
+// DNA MINI CANVAS
+// ============================================================
+const dnaCanvas = document.getElementById('dna-canvas');
+const dnaCtx    = dnaCanvas.getContext('2d');
+function drawDNA() {
+  const t   = Date.now() / 800;
+  const w   = dnaCanvas.width, h = dnaCanvas.height;
+  dnaCtx.clearRect(0, 0, w, h);
+  const steps = 24;
+  for(let i = 0; i < steps; i++) {
+    const y    = (i / steps) * h;
+    const x1   = w/2 + Math.sin(t + i * 0.5) * 22;
+    const x2   = w/2 - Math.sin(t + i * 0.5) * 22;
+    const alpha= 0.4 + Math.sin(t + i * 0.3) * 0.3;
+
+    dnaCtx.strokeStyle = `rgba(0,136,255,${alpha})`;
+    dnaCtx.lineWidth = 1;
+    dnaCtx.beginPath();
+    dnaCtx.moveTo(x1, y);
+    dnaCtx.lineTo(x2, y);
+    dnaCtx.stroke();
+
+    dnaCtx.fillStyle = `rgba(0,255,200,${alpha + 0.2})`;
+    dnaCtx.beginPath();
+    dnaCtx.arc(x1, y, 3, 0, Math.PI*2);
+    dnaCtx.fill();
+    dnaCtx.beginPath();
+    dnaCtx.arc(x2, y, 3, 0, Math.PI*2);
+    dnaCtx.fill();
+  }
+  requestAnimationFrame(drawDNA);
+}
+drawDNA();
+
+// ============================================================
+// DATA FETCHING
+// ============================================================
+async function fetchJSON(url) {
+  try {
+    const r = await fetch(url + '?t=' + Date.now());
+    if(!r.ok) return null;
+    return await r.json();
+  } catch(e) {
+    return null;
+  }
+}
+
+async function updateDashboard() {
+  // Fetch signal
+  const sig = await fetchJSON(SIGNAL_URL);
+  if(sig) {
+    updateSignalUI(sig);
+  }
+
+  // Fetch status
+  const status = await fetchJSON(STATUS_URL);
+  if(status) {
+    updateStatusUI(status);
+  }
+
+  // Fetch evolution log
+  const evoLog = await fetchJSON(EVO_LOG_URL);
+  if(evoLog && Array.isArray(evoLog)) {
+    updateEvoLog(evoLog);
+  }
+
+  // Update time
+  const now = new Date();
+  document.getElementById('header-time').textContent = now.toUTCString().slice(0,25);
+  document.getElementById('conn-time').textContent = 'Last update: ' + now.toTimeString().slice(0,8);
+  document.getElementById('conn-status').textContent = '✅ Connected';
+}
+
+function updateSignalUI(sig) {
+  const signal  = sig.signal || 'NONE';
+  const reason  = sig.reason || '--';
+  const orgId   = sig.organism_id || '--';
+  const session = sig.session || '--';
+  const ts      = sig.generated_at || sig.timestamp || '--';
+
+  // Badge
+  const badge = document.getElementById('signal-badge');
+  badge.className = 'signal-badge ' + signal;
+  badge.id = 'signal-badge';
+  const emoji = signal === 'BUY' ? '▲ BUY' : signal === 'SELL' ? '▼ SELL' : '⏸ NONE';
+  badge.textContent = emoji;
+  badge.style.background = signal === 'BUY'  ? '#003322' :
+                           signal === 'SELL' ? '#330011' : '#111';
+  badge.style.color  = signal === 'BUY'  ? '#00ff88' :
+                       signal === 'SELL' ? '#ff4466' : '#556677';
+  badge.style.border = signal === 'BUY'  ? '1px solid #00ff88' :
+                       signal === 'SELL' ? '1px solid #ff4466' : '1px solid #333';
+
+  document.getElementById('signal-reason').textContent   = reason.slice(0,40);
+  document.getElementById('signal-organism').textContent = orgId;
+  document.getElementById('signal-session').textContent  = session;
+  document.getElementById('signal-time').textContent     = ts.slice(0,19);
+  document.getElementById('header-session').textContent  = 'Session: ' + session;
+
+  // Update mood
+  if(signal === 'BUY')  { state.mood = 'profit'; setMood('📈 Bullish Signal - BUY!', '#00ff88'); }
+  else if(signal === 'SELL') { state.mood = 'loss'; setMood('📉 Bearish Signal - SELL!', '#ff4466'); }
+  else { state.mood = 'idle'; setMood('🧬 Analyzing market...', '#00ffcc'); }
+}
+
+function updateStatusUI(status) {
+  document.getElementById('stat-organisms').textContent = status.organism_count || '--';
+  document.getElementById('stat-best-org').textContent  = status.best_organism || '--';
+  document.getElementById('stat-best-score').textContent = (status.best_score || 0).toFixed(4);
+  const evoTime = status.last_evolution ? status.last_evolution.slice(0,19) : '--';
+  document.getElementById('stat-last-evo').textContent   = evoTime;
+
+  // Render organism list
+  const orgs  = status.organisms || [];
+  const bestO = status.best_organism;
+  const list  = document.getElementById('organism-list');
+  if(orgs.length === 0) {
+    list.innerHTML = '<div style="color:#334455;font-size:0.75rem;">No organisms found</div>';
+    return;
+  }
+  list.innerHTML = orgs.map(org => {
+    const isBest = org === bestO;
+    return `<div class="organism-item ${isBest?'best':''}" onclick="selectOrganism('${org}')">
+      <span>${isBest?'👑 ':'🔬 '}${org}</span>
+      <span class="organism-gen">gen?</span>
+    </div>`;
+  }).join('');
+
+  state.organisms = orgs;
+}
+
+function updateEvoLog(log) {
+  const container = document.getElementById('evo-log');
+  const recent = log.slice(-8).reverse();
+  container.innerHTML = recent.map(entry => {
+    const time    = (entry.timestamp||'').slice(0,19);
+    const newOrgs = (entry.new_organisms||[]).length;
+    const best    = entry.best_organism || '--';
+    const score   = (entry.best_score||0).toFixed(2);
+    return `<div class="evo-entry">
+      <span class="time">${time}</span><br>
+      <span class="event">🧬 +${newOrgs} orgs | Best: ${best} (${score})</span>
+    </div>`;
+  }).join('');
+}
+
+function setMood(text, color) {
+  const el = document.getElementById('avatar-mood');
+  el.textContent = text;
+  el.style.color = color;
+  el.style.textShadow = `0 0 20px ${color}`;
+}
+
+function selectOrganism(orgId) {
+  state.mood = 'evolving';
+  setMood(`🔬 Viewing: ${orgId}`, '#ffcc00');
+}
+
+// Start periodic updates
+updateDashboard();
+setInterval(updateDashboard, FETCH_INTERVAL);
+
+// Time display
+setInterval(() => {
+  const now = new Date();
+  document.getElementById('header-time').textContent = now.toUTCString().slice(4,25);
+}, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MT5 Status Dashboard</title>
+<style>
+body { background:#000510; color:#00ffcc; font-family:'Courier New',monospace; margin:0; padding:16px; }
+h2 { color:#0088ff; border-bottom:1px solid #003366; padding-bottom:8px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+.box { background:#000c1a; border:1px solid #003366; padding:12px; border-radius:6px; }
+.box h3 { color:#668899; font-size:0.75rem; letter-spacing:2px; margin-bottom:8px; }
+.row { display:flex; justify-content:space-between; padding:4px 0; font-size:0.8rem; }
+.val { color:#00ffcc; font-weight:bold; }
+.buy  { color:#00ff88; }
+.sell { color:#ff4466; }
+.note { font-size:0.65rem; color:#334455; margin-top:8px; }
+a { color:#0088ff; text-decoration:none; }
+a:hover { color:#00ffcc; }
+</style>
+</head>
+<body>
+<h2>📊 MT5 Status Dashboard (Manual / Permanent)</h2>
+<p style="color:#446688;font-size:0.8rem;">
+  ⚠️ Dashboard ini statis - tidak berubah oleh AI.<br>
+  Untuk melihat evolusi lengkap AI: <a href="index.html">→ AI Living Dashboard</a>
+</p>
+
+<div class="grid">
+  <div class="box">
+    <h3>EA SETTINGS</h3>
+    <div class="row"><span>Symbol</span><span class="val">XAUUSD (+ semua)</span></div>
+    <div class="row"><span>Timeframe</span><span class="val">M1 (Scalping)</span></div>
+    <div class="row"><span>Lot Default</span><span class="val">0.01</span></div>
+    <div class="row"><span>Max Lot</span><span class="val">0.10</span></div>
+    <div class="row"><span>Broker</span><span class="val">Hedging</span></div>
+    <div class="row"><span>Ghost SL</span><span class="val">200 points</span></div>
+    <div class="row"><span>Min Layer Dist</span><span class="val">150 points</span></div>
+  </div>
+
+  <div class="box">
+    <h3>CAPITAL PROTECTION</h3>
+    <div class="row"><span>2x Rule</span><span class="val">✅ Active</span></div>
+    <div class="row"><span>Trigger</span><span class="val">$50 → $100</span></div>
+    <div class="row"><span>Locked Fund</span><span class="val">$50 (50%)</span></div>
+    <div class="row"><span>Trading Fund</span><span class="val">$50 (50%)</span></div>
+    <div class="row"><span>Unlock After</span><span class="val">Next Session</span></div>
+  </div>
+
+  <div class="box">
+    <h3>MARKET SESSIONS (UTC)</h3>
+    <div class="row"><span>🌏 Asia</span><span class="val">00:00 - 09:00</span></div>
+    <div class="row"><span>🇬🇧 London</span><span class="val">08:00 - 17:00</span></div>
+    <div class="row"><span>🇺🇸 New York</span><span class="val">13:00 - 22:00</span></div>
+    <div class="row"><span>Loss Recovery</span><span class="val">Wait next session</span></div>
+  </div>
+
+  <div class="box">
+    <h3>TRAILING LOCK TABLE</h3>
+    <div class="row"><span>Profit 10%</span><span class="val buy">→ Lock 5%</span></div>
+    <div class="row"><span>Profit 20%</span><span class="val buy">→ Lock 10%</span></div>
+    <div class="row"><span>Profit 50%</span><span class="val buy">→ Lock 35%</span></div>
+    <div class="row"><span>Profit 80%</span><span class="val buy">→ Lock 65%</span></div>
+    <div class="row"><span>Profit 95%</span><span class="val buy">→ Lock 90%</span></div>
+  </div>
+
+  <div class="box">
+    <h3>HOW IT WORKS</h3>
+    <div class="row"><span>AI Location</span><span class="val">GitHub Actions</span></div>
+    <div class="row"><span>MT5 Role</span><span class="val">Signal executor</span></div>
+    <div class="row"><span>Signal Source</span><span class="val">signal.json</span></div>
+    <div class="row"><span>Update Rate</span><span class="val">Every 5 min</span></div>
+    <div class="row"><span>Laptop Load</span><span class="val">🟢 Very light</span></div>
+  </div>
+
+  <div class="box">
+    <h3>LINKS</h3>
+    <div class="row"><span>AI Dashboard</span>
+      <span><a href="index.html">Open →</a></span></div>
+    <div class="row"><span>Signal File</span>
+      <span><a href="../signal.json" target="_blank">View →</a></span></div>
+    <div class="row"><span>DNA Core</span>
+      <span><a href="../DNA/core_dna.json" target="_blank">View →</a></span></div>
+    <div class="row"><span>Evolution Log</span>
+      <span><a href="../MEMORY/evolution_log.json" target="_blank">View →</a></span></div>
+  </div>
+</div>
+
+<p class="note">
+  ℹ️ Dashboard ini tidak dimodifikasi AI. Untuk melihat avatar hidup dan evolusi real-time
+  gunakan <a href="index.html">AI Living Dashboard</a>.<br>
+  📱 Saat di HP: kamera, mic, dan layar sentuh menjadi "indra" AI melalui browser.
+</p>
+</body>
+</html>
