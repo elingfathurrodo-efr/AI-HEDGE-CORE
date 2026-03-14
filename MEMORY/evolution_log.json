@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "timestamp": "2026-03-14T07:19:00.218617",
+    "organisms_before": [
+      "organism_002",
+      "organism_001"
+    ],
+    "scores": {
+      "organism_002": 0.4739348460120124,
+      "organism_001": 0.20059800678682418
+    },
+    "new_organisms": [
+      "organism_003"
+    ],
+    "organisms_after": [
+      "organism_003",
+      "organism_002",
+      "organism_001"
+    ],
+    "best_organism": "organism_002",
+    "best_score": 0.4739348460120124
+  }
+]
