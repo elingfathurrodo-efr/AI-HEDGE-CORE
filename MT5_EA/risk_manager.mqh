@@ -1,1 +1,0 @@
-double MaxRisk = 0.02;

@@ -1,4 +1,0 @@
-string ReadSignal()
-{
-   return "BUY";
-}
