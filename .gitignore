@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Logs
+*.log
+SECURITY/immune_log.txt
+
+# Backups (keep structure, ignore heavy backups)
+ORGANISMS/_archive/
+
+# Local testing
+.env
+.venv
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# Don't ignore these important files:
+!ORGANISMS/*/dna.json
+!ORGANISMS/*/memory.json
+!ORGANISMS/*/brain.py
+!signal.json
+!MEMORY/status.json
+!MEMORY/evolution_log.json
