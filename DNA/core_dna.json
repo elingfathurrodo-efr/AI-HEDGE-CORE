@@ -1,0 +1,140 @@
+{
+  "_comment": "CORE DNA - IMMUTABLE - AI CANNOT CHANGE THIS FILE",
+  "_version": "1.0.0",
+  "_locked": true,
+
+  "identity": {
+    "name": "TradingOrganism",
+    "version": "1.0.0",
+    "birth": "2024-01-01",
+    "creator": "Human",
+    "purpose": "Trade, Learn, Evolve, Survive"
+  },
+
+  "trading_rules": {
+    "default_symbol": "XAUUSD",
+    "timeframe": "M1",
+    "default_lot": 0.01,
+    "max_lot": 0.10,
+    "min_lot": 0.01,
+    "broker_type": "hedging",
+    "scalping_mode": true,
+    "entry_per_candle": true,
+    "anti_stacking": true,
+    "min_layer_distance_points": 150
+  },
+
+  "seven_strategies": [
+    {
+      "id": "S1",
+      "name": "Breakout",
+      "description": "Entry saat harga menembus level support/resistance kuat",
+      "indicators": ["high_low_50", "atr"],
+      "entry_condition": "close > resistance OR close < support",
+      "weight": 1.0
+    },
+    {
+      "id": "S2",
+      "name": "Trend Following",
+      "description": "Ikuti arah trend menggunakan MA crossover",
+      "indicators": ["ma_fast", "ma_slow", "adx"],
+      "entry_condition": "ma_fast > ma_slow AND adx > 25",
+      "weight": 1.0
+    },
+    {
+      "id": "S3",
+      "name": "Momentum",
+      "description": "Entry saat momentum kuat RSI + volume",
+      "indicators": ["rsi", "volume", "macd"],
+      "entry_condition": "rsi > 60 AND macd_signal > 0",
+      "weight": 1.0
+    },
+    {
+      "id": "S4",
+      "name": "Mean Reversion",
+      "description": "Entry saat harga terlalu jauh dari mean",
+      "indicators": ["bollinger", "rsi"],
+      "entry_condition": "close < lower_band OR close > upper_band",
+      "weight": 1.0
+    },
+    {
+      "id": "S5",
+      "name": "Scalping Micro",
+      "description": "Entry cepat dengan spread kecil, TP kecil SL kecil",
+      "indicators": ["spread", "volatility", "tick_volume"],
+      "entry_condition": "spread < 3 AND volatility > threshold",
+      "weight": 1.0
+    },
+    {
+      "id": "S6",
+      "name": "Session Breakout",
+      "description": "Entry saat pembukaan sesi London/NY dengan momentum",
+      "indicators": ["session_open", "range_24h", "atr"],
+      "entry_condition": "is_session_open AND range_expansion",
+      "weight": 1.0
+    },
+    {
+      "id": "S7",
+      "name": "Support Resistance Bounce",
+      "description": "Entry di dekat SR level dengan konfirmasi candle",
+      "indicators": ["pivot_points", "candle_pattern", "rsi"],
+      "entry_condition": "near_sr AND confirmation_candle",
+      "weight": 1.0
+    }
+  ],
+
+  "risk_management": {
+    "ghost_sl": true,
+    "ghost_sl_points_default": 150,
+    "ghost_sl_xauusd": 200,
+    "trailing_enabled": true,
+    "trailing_table": [
+      {"profit_pct": 10, "lock_pct": 5},
+      {"profit_pct": 20, "lock_pct": 10},
+      {"profit_pct": 30, "lock_pct": 20},
+      {"profit_pct": 40, "lock_pct": 28},
+      {"profit_pct": 50, "lock_pct": 35},
+      {"profit_pct": 60, "lock_pct": 44},
+      {"profit_pct": 70, "lock_pct": 54},
+      {"profit_pct": 80, "lock_pct": 65},
+      {"profit_pct": 90, "lock_pct": 80},
+      {"profit_pct": 95, "lock_pct": 90}
+    ],
+    "capital_protection": {
+      "double_rule": true,
+      "multiply_trigger": 2.0,
+      "locked_ratio": 0.5,
+      "trading_ratio": 0.5,
+      "locked_fund_wait_next_session": true
+    }
+  },
+
+  "market_sessions": {
+    "asia": {"start_utc": "00:00", "end_utc": "09:00"},
+    "london": {"start_utc": "08:00", "end_utc": "17:00"},
+    "newyork": {"start_utc": "13:00", "end_utc": "22:00"}
+  },
+
+  "evolution_rules": {
+    "ai_can_modify_brain": true,
+    "ai_can_create_new_organism": true,
+    "ai_cannot_modify_dna": true,
+    "ai_cannot_modify_immunity": true,
+    "ai_cannot_modify_security": true,
+    "max_organisms": 50,
+    "evolution_interval_hours": 24,
+    "tournament_enabled": true,
+    "mutation_rate": 0.2,
+    "survival_rate": 0.5
+  },
+
+  "trauma_system": {
+    "enabled": true,
+    "rollback_on_error": true,
+    "max_rollback_versions": 5,
+    "backup_before_evolve": true
+  },
+
+  "immutable_signature": "DNA_CORE_V1_LOCKED_DO_NOT_MODIFY"
+}
+
