@@ -1,0 +1,41 @@
+name: 📡 Signal Generator (Every 5 min)
+
+on:
+  schedule:
+    # Run every 5 minutes during market hours
+    - cron: '*/5 0-22 * * 1-5'   # Mon-Fri, 00:00-22:00 UTC every 5 min
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate_signal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install
+        run: pip install --quiet requests
+
+      - name: Generate Signal
+        run: |
+          python RUNNER/runner.py
+          echo "=== SIGNAL ==="
+          cat signal.json
+
+      - name: Commit Signal
+        run: |
+          git config user.name  "Signal-Bot"
+          git config user.email "bot@noreply.github.com"
+          git add signal.json MEMORY/
+          git diff --staged --quiet || git commit -m "📡 $(python3 -c "import json; d=json.load(open('signal.json')); print(d.get('signal','NONE'),'|',d.get('reason','')[:40])")"
+          git push origin main || true

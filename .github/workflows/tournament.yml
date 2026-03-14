@@ -1,0 +1,29 @@
+name: 🏆 Organism Tournament
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tournament:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install --quiet requests
+      - run: python EVOLUTION/tournament.py
+      - name: Commit Results
+        run: |
+          git config user.name "Tournament-Bot"
+          git config user.email "bot@noreply.github.com"
+          git add MEMORY/ ORGANISMS/
+          git diff --staged --quiet || git commit -m "🏆 Tournament Results"
+          git push origin main || true

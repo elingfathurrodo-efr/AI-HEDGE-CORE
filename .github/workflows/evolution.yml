@@ -1,0 +1,146 @@
+name: 🧬 AI Evolution Engine
+
+on:
+  schedule:
+    # Run every day at 03:00 UTC (after Asian session)
+    - cron: '0 3 * * *'
+  workflow_dispatch:   # Allow manual trigger
+    inputs:
+      force_evolution:
+        description: 'Force evolution cycle'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write   # Allow pushing evolved organisms back to repo
+  actions: write
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 🔬 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+          fetch-depth: 0
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install Dependencies
+        run: |
+          pip install --quiet requests numpy
+
+      - name: 🛡️ Validate DNA Integrity
+        run: |
+          python -c "
+          import json, sys
+          with open('DNA/core_dna.json') as f:
+              dna = json.load(f)
+          sig = dna.get('immutable_signature', '')
+          expected = 'DNA_CORE_V1_LOCKED_DO_NOT_MODIFY'
+          if sig != expected:
+              print('❌ DNA CORRUPTED! Signature mismatch!')
+              sys.exit(1)
+          print('✅ DNA integrity OK')
+          "
+
+      - name: 🔍 List Current Organisms
+        run: |
+          echo "=== CURRENT ORGANISMS ==="
+          ls ORGANISMS/ 2>/dev/null || echo "No organisms yet"
+          echo "========================="
+
+      - name: 🧬 Run Evolution Cycle
+        run: |
+          cd $GITHUB_WORKSPACE
+          python EVOLUTION/evolve.py
+
+      - name: 📊 Run Tournament
+        run: |
+          cd $GITHUB_WORKSPACE
+          python EVOLUTION/tournament.py
+
+      - name: 📡 Generate Signal
+        run: |
+          cd $GITHUB_WORKSPACE
+          python RUNNER/runner.py
+
+      - name: 🔄 Update Evolution Log
+        run: |
+          python -c "
+          import json, os
+          from datetime import datetime
+          
+          # Count organisms
+          org_dir = 'ORGANISMS'
+          orgs = [d for d in os.listdir(org_dir) if os.path.isdir(os.path.join(org_dir, d)) and not d.startswith('_')]
+          
+          # Load best organism
+          best_id = 'unknown'
+          best_score = 0
+          for org_id in orgs:
+              mem_path = os.path.join(org_dir, org_id, 'memory.json')
+              if os.path.exists(mem_path):
+                  with open(mem_path) as f:
+                      mem = json.load(f)
+                  score = mem.get('total_profit', 0) - mem.get('total_loss', 0)
+                  if score > best_score:
+                      best_score = score
+                      best_id = org_id
+          
+          status = {
+              'last_evolution': datetime.utcnow().isoformat(),
+              'organism_count': len(orgs),
+              'best_organism': best_id,
+              'best_score': best_score,
+              'organisms': orgs
+          }
+          with open('MEMORY/status.json', 'w') as f:
+              json.dump(status, f, indent=2)
+          print(f'Status: {len(orgs)} organisms, best={best_id}')
+          "
+
+      - name: 💾 Commit Evolution Results
+        run: |
+          git config user.name  "AI-Evolution-Bot"
+          git config user.email "ai-evolution@noreply.github.com"
+          git add ORGANISMS/ signal.json MEMORY/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "🧬 Evolution cycle - $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push origin main || echo "Nothing to push"
+
+  generate_signal:
+    runs-on: ubuntu-latest
+    needs: evolve
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN || github.token }}
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install --quiet requests
+
+      - name: Generate Signal
+        run: |
+          git pull origin main
+          python RUNNER/runner.py || echo "Runner error handled"
+          cat signal.json || echo "{}"
+
+      - name: Push signal
+        run: |
+          git config user.name "Signal-Bot"
+          git config user.email "signal@noreply.github.com"
+          git add signal.json MEMORY/
+          git diff --staged --quiet || git commit -m "📡 Signal update $(date -u '+%H:%M UTC')"
+          git push origin main || echo "Signal push done"
