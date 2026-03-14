@@ -1,0 +1,20 @@
+{
+  "organism_id": "template",
+  "created_at": "2024-01-01T00:00:00Z",
+  "generation": 1,
+  "strategy": "combined",
+  "risk": 0.01,
+  "aggressiveness": 0.3,
+  "layer_distance": 1.5,
+  "sl_points": 200,
+  "tp_ratio": 2.0,
+  "ma_fast": 8,
+  "ma_slow": 21,
+  "rsi_period": 14,
+  "rsi_overbought": 70,
+  "rsi_oversold": 30,
+  "preferred_sessions": ["London", "NewYork"],
+  "min_confidence": 0.6,
+  "notes": "Base template DNA"
+}
+
