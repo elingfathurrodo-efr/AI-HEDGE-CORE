@@ -1,15 +1,15 @@
 {
-  "signal": "SELL",
+  "signal": "BUY",
   "confidence": 0.7,
-  "votes": 1,
-  "reason": "Asia session breakout down",
+  "votes": 2,
+  "reason": "MA5 cross up, ADX=24.5",
   "organism_id": "organism_002",
   "lot": 0.01,
   "sl_points": 180,
   "tp_ratio": 2.5,
-  "timestamp": "2026-03-16T05:12:19.786568",
+  "timestamp": "2026-03-16T05:55:03.591817",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-03-16T05:12:19.786578",
+  "generated_at": "2026-03-16T05:55:03.591834",
   "valid_seconds": 65
 }
