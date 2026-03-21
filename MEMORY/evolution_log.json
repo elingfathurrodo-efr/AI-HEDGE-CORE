@@ -210,5 +210,54 @@
     ],
     "best_organism": "organism_001",
     "best_score": 14659.42857142857
+  },
+  {
+    "timestamp": "2026-03-21T04:25:02.973762",
+    "organisms_before": [
+      "organism_003",
+      "organism_005",
+      "organism_008",
+      "organism_007",
+      "organism_004",
+      "organism_006",
+      "organism_010",
+      "organism_002",
+      "organism_001",
+      "organism_009"
+    ],
+    "scores": {
+      "organism_003": 16659.787500000002,
+      "organism_005": 12337.5,
+      "organism_008": 1413.2580000000007,
+      "organism_007": 3790.4,
+      "organism_004": 15749.999999999998,
+      "organism_006": 6858.945000000001,
+      "organism_010": 929.2139999999996,
+      "organism_002": 15550.0875,
+      "organism_001": 16400.75,
+      "organism_009": 1050.0
+    },
+    "new_organisms": [
+      "organism_011",
+      "organism_012",
+      "organism_013"
+    ],
+    "organisms_after": [
+      "organism_003",
+      "organism_001",
+      "organism_004",
+      "organism_002",
+      "organism_005",
+      "organism_006",
+      "organism_007",
+      "organism_008",
+      "organism_009",
+      "organism_010",
+      "organism_012",
+      "organism_011",
+      "organism_013"
+    ],
+    "best_organism": "organism_003",
+    "best_score": 16659.787500000002
   }
 ]
