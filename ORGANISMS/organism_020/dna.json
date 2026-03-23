@@ -1,0 +1,25 @@
+{
+  "organism_id": "organism_020",
+  "created_at": "2026-03-23T05:00:19.022300",
+  "generation": 5,
+  "strategy": "trend",
+  "risk": 0.01,
+  "aggressiveness": 0.5,
+  "layer_distance": 2.0,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "ma_fast": 5,
+  "ma_slow": 13,
+  "rsi_period": 12,
+  "rsi_overbought": 70,
+  "rsi_oversold": 32,
+  "preferred_sessions": [
+    "London"
+  ],
+  "min_confidence": 0.4728,
+  "parents": [
+    "organism_003"
+  ],
+  "notes": "Momentum-focused organism gen1",
+  "born_at": "2026-03-23T05:00:19.022070"
+}
