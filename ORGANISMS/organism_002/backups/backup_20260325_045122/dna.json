@@ -1,0 +1,20 @@
+{
+  "organism_id": "organism_002",
+  "created_at": "2024-01-01T00:00:00Z",
+  "generation": 1,
+  "strategy": "momentum",
+  "risk": 0.01,
+  "aggressiveness": 0.5,
+  "layer_distance": 2.0,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "ma_fast": 5,
+  "ma_slow": 13,
+  "rsi_period": 12,
+  "rsi_overbought": 68,
+  "rsi_oversold": 32,
+  "preferred_sessions": ["London"],
+  "min_confidence": 0.55,
+  "parents": ["organism_001"],
+  "notes": "Momentum-focused organism gen1"
+}
