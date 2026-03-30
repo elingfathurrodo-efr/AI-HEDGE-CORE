@@ -1,6 +1,15 @@
 {
-  "signal": "NONE",
-  "reason": "Not enough data",
-  "generated_at": "2026-03-30T04:14:48.988515",
+  "signal": "BUY",
+  "confidence": 0.75,
+  "votes": 3,
+  "reason": "RSI=73.3 MACD bullish",
+  "organism_id": "organism_004",
+  "lot": 0.01,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-03-30T05:21:13.265212",
+  "symbol": "XAUUSD",
+  "session": "Asia",
+  "generated_at": "2026-03-30T05:21:13.265245",
   "valid_seconds": 65
 }
