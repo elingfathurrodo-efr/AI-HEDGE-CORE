@@ -1,15 +1,9 @@
 {
-  "signal": "SELL",
-  "confidence": 0.7,
-  "votes": 1,
-  "reason": "MA5 cross down, ADX=32.3",
+  "signal": "NONE",
+  "confidence": 0,
   "organism_id": "organism_016",
-  "lot": 0.0182,
-  "sl_points": 180,
-  "tp_ratio": 2.5,
-  "timestamp": "2026-05-21T23:37:32.692923",
   "symbol": "XAUUSD",
-  "session": "Closed",
-  "generated_at": "2026-05-21T23:37:32.692982",
+  "session": "Asia",
+  "generated_at": "2026-05-22T01:54:03.474265",
   "valid_seconds": 65
 }
