@@ -1,15 +1,15 @@
 {
-  "signal": "SELL",
-  "confidence": 0.7,
-  "votes": 1,
-  "reason": "MA5 cross down, ADX=34.1",
+  "signal": "BUY",
+  "confidence": 0.75,
+  "votes": 3,
+  "reason": "RSI=56.4 MACD bullish",
   "organism_id": "organism_016",
   "lot": 0.0182,
   "sl_points": 180,
   "tp_ratio": 2.5,
-  "timestamp": "2026-05-24T06:35:02.870668",
+  "timestamp": "2026-05-24T06:35:15.632951",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-05-24T06:35:02.870734",
+  "generated_at": "2026-05-24T06:35:15.633002",
   "valid_seconds": 65
 }
