@@ -1,46 +1,5 @@
 [
   {
-    "timestamp": "2026-03-20T04:44:11.899213",
-    "organisms_before": [
-      "organism_003",
-      "organism_005",
-      "organism_008",
-      "organism_007",
-      "organism_004",
-      "organism_006",
-      "organism_002",
-      "organism_001"
-    ],
-    "scores": {
-      "organism_003": 14612.4,
-      "organism_005": 10897.89,
-      "organism_008": 722.5679999999999,
-      "organism_007": 2094.4,
-      "organism_004": 13131.449999999999,
-      "organism_006": 4453.72,
-      "organism_002": 13503.6,
-      "organism_001": 14659.42857142857
-    },
-    "new_organisms": [
-      "organism_009",
-      "organism_010"
-    ],
-    "organisms_after": [
-      "organism_001",
-      "organism_003",
-      "organism_002",
-      "organism_004",
-      "organism_005",
-      "organism_006",
-      "organism_007",
-      "organism_008",
-      "organism_009",
-      "organism_010"
-    ],
-    "best_organism": "organism_001",
-    "best_score": 14659.42857142857
-  },
-  {
     "timestamp": "2026-03-21T04:25:02.973762",
     "organisms_before": [
       "organism_003",
@@ -7942,5 +7901,86 @@
     ],
     "best_organism": "organism_016",
     "best_score": 388505.19324323
+  },
+  {
+    "timestamp": "2026-06-28T07:00:01.352879",
+    "organisms_before": [
+      "organism_004",
+      "organism_016",
+      "organism_019",
+      "organism_012",
+      "organism_007",
+      "organism_013",
+      "organism_009",
+      "organism_008",
+      "organism_001",
+      "organism_006",
+      "organism_017",
+      "organism_011",
+      "organism_005",
+      "organism_003",
+      "organism_015",
+      "organism_014",
+      "organism_018",
+      "organism_020",
+      "organism_002",
+      "organism_010"
+    ],
+    "scores": {
+      "organism_004": 243749.5725,
+      "organism_016": 391234.66199998657,
+      "organism_019": 210192.67297297297,
+      "organism_012": 278539.98159290996,
+      "organism_007": 182782.8103448276,
+      "organism_013": 244469.1327433628,
+      "organism_009": 187651.36842105264,
+      "organism_008": 150212.60799999486,
+      "organism_001": 202197.88429752065,
+      "organism_006": 225456.89102564103,
+      "organism_017": 328482.35550001025,
+      "organism_011": 211297.603539823,
+      "organism_005": 232869.35966386556,
+      "organism_003": 232013.66280991735,
+      "organism_015": 346459.89482144,
+      "organism_014": 332803.654932845,
+      "organism_018": 181130.5945945946,
+      "organism_020": 217027.2,
+      "organism_002": 236396.02314049588,
+      "organism_010": 229546.78499999747
+    },
+    "new_organisms": [
+      "organism_021",
+      "organism_022",
+      "organism_023",
+      "organism_024",
+      "organism_025",
+      "organism_026",
+      "organism_027",
+      "organism_028"
+    ],
+    "organisms_after": [
+      "organism_016",
+      "organism_015",
+      "organism_014",
+      "organism_017",
+      "organism_012",
+      "organism_013",
+      "organism_004",
+      "organism_002",
+      "organism_005",
+      "organism_003",
+      "organism_010",
+      "organism_006",
+      "organism_020",
+      "organism_011",
+      "organism_019",
+      "organism_001",
+      "organism_009",
+      "organism_007",
+      "organism_018",
+      "organism_008"
+    ],
+    "best_organism": "organism_016",
+    "best_score": 391234.66199998657
   }
 ]
