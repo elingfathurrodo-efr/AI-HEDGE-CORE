@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "BUY",
+  "confidence": 0.8,
+  "votes": 4,
+  "reason": "Breakout resistance 2400.34",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-07-12T05:53:19.441515",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-07-11T05:36:23.947739",
+  "generated_at": "2026-07-12T05:53:19.441589",
   "valid_seconds": 65
 }
