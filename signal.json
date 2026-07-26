@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "SELL",
+  "confidence": 0.75,
+  "votes": 3,
+  "reason": "RSI=42.9 MACD bearish",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-07-26T05:57:12.481837",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-07-26T05:56:57.399780",
+  "generated_at": "2026-07-26T05:57:12.481894",
   "valid_seconds": 65
 }
