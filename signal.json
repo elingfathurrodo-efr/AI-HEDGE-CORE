@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "BUY",
+  "confidence": 0.75,
+  "votes": 2,
+  "reason": "RSI=55.6 MACD bullish",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-08-12T04:58:45.208722",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-08-12T04:44:20.852272",
+  "generated_at": "2026-08-12T04:58:45.208818",
   "valid_seconds": 65
 }
