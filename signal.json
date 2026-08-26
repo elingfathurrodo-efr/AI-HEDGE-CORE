@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "BUY",
+  "confidence": 0.7,
+  "votes": 2,
+  "reason": "MA5 cross up, ADX=23.6",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-08-26T04:01:35.906233",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-08-26T03:49:57.030395",
+  "generated_at": "2026-08-26T04:01:35.906288",
   "valid_seconds": 65
 }
