@@ -1,15 +1,15 @@
 {
   "signal": "SELL",
-  "confidence": 0.75,
-  "votes": 3,
-  "reason": "RSI=13.7 MACD bearish",
+  "confidence": 0.7,
+  "votes": 2,
+  "reason": "MA5 cross down, ADX=29.9",
   "organism_id": "organism_016",
   "lot": 0.0182,
   "sl_points": 180,
   "tp_ratio": 2.5,
-  "timestamp": "2026-08-31T01:44:36.237447",
+  "timestamp": "2026-08-31T07:40:03.784544",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-08-31T01:44:36.237517",
+  "generated_at": "2026-08-31T07:40:03.784603",
   "valid_seconds": 65
 }
