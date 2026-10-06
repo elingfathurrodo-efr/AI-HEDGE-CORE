@@ -1,0 +1,26 @@
+{
+  "organism_id": "organism_005",
+  "created_at": "2026-03-16T05:12:07.365357",
+  "generation": 3,
+  "strategy": "combined",
+  "risk": 0.01,
+  "aggressiveness": 0.3642,
+  "layer_distance": 1.1167,
+  "sl_points": 235,
+  "tp_ratio": 2.0,
+  "ma_fast": 8,
+  "ma_slow": 21,
+  "rsi_period": 16,
+  "rsi_overbought": 70,
+  "rsi_oversold": 29,
+  "preferred_sessions": [
+    "London",
+    "NewYork"
+  ],
+  "min_confidence": 0.6,
+  "parents": [
+    "organism_001"
+  ],
+  "notes": "First genesis organism",
+  "born_at": "2026-03-16T05:12:07.365136"
+}
