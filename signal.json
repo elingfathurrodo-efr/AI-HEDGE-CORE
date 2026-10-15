@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "SELL",
+  "confidence": 0.7,
+  "votes": 1,
+  "reason": "London session breakout down",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-10-15T12:06:14.427672",
   "symbol": "XAUUSD",
-  "session": "Asia",
-  "generated_at": "2026-10-15T07:57:39.234216",
+  "session": "London",
+  "generated_at": "2026-10-15T12:06:14.427709",
   "valid_seconds": 65
 }
