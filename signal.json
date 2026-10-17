@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "BUY",
+  "confidence": 0.7,
+  "votes": 1,
+  "reason": "Asia session breakout up",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-10-17T07:28:53.516250",
   "symbol": "XAUUSD",
-  "session": "Closed",
-  "generated_at": "2026-10-16T23:55:02.627182",
+  "session": "Asia",
+  "generated_at": "2026-10-17T07:28:53.516311",
   "valid_seconds": 65
 }
