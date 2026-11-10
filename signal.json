@@ -1,15 +1,15 @@
 {
-  "signal": "SELL",
-  "confidence": 0.75,
-  "votes": 2,
-  "reason": "RSI=17.4 MACD bearish",
+  "signal": "BUY",
+  "confidence": 0.7,
+  "votes": 1,
+  "reason": "London session breakout up",
   "organism_id": "organism_016",
   "lot": 0.0182,
   "sl_points": 180,
   "tp_ratio": 2.5,
-  "timestamp": "2026-11-10T03:41:34.619473",
+  "timestamp": "2026-11-10T10:43:44.411129",
   "symbol": "XAUUSD",
-  "session": "Asia",
-  "generated_at": "2026-11-10T03:41:34.619537",
+  "session": "London",
+  "generated_at": "2026-11-10T10:43:44.411208",
   "valid_seconds": 65
 }
