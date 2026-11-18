@@ -1,735 +1,15 @@
 {
   "organism_id": "organism_017",
   "created_at": "2026-03-22T04:49:48.919161",
-  "total_trades": 5400,
-  "win_trades": 3887,
-  "loss_trades": 1513,
-  "total_profit": 276365.7000000105,
-  "total_loss": 43029.72000000018,
-  "win_rate": 0.7198148148148148,
+  "total_trades": 5520,
+  "win_trades": 3974,
+  "loss_trades": 1546,
+  "total_profit": 282551.40000000846,
+  "total_loss": 43968.24000000026,
+  "win_rate": 0.7199275362318841,
   "best_strategy": null,
   "market_patterns": [],
   "trade_history": [
-    {
-      "time": "2026-09-30T09:15:39.690863",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:39.854400",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:39.978580",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.102769",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.227477",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.351881",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.476258",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.601186",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.725399",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.845335",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:40.969074",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.090532",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.211071",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.333052",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.454893",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.576873",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.699298",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.823501",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:41.950548",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-09-30T09:15:42.086902",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.069896",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.243082",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.371457",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.498210",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.625629",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.753188",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:14.883540",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.012563",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.140663",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.268914",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.396691",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.526077",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.655544",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.783832",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:15.911880",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:16.039268",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:16.167162",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:16.294562",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:16.422332",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-01T09:43:16.553355",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:52.798446",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:52.898826",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:52.975589",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.057759",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.177157",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.465754",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.542313",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.618933",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.695019",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.769022",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.851218",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:53.935739",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.013995",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.129445",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.295283",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.368306",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.446017",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.545031",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.617724",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-02T09:17:54.755979",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:21.588155",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:21.768705",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:21.889540",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.011733",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.132469",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.252942",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.374004",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.494377",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.615027",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.735982",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.854985",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:22.975528",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.096894",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.217902",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.340537",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.460504",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.581047",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.702865",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.823283",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-03T08:49:23.946415",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:49.352780",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:49.517564",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:49.644511",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:49.767083",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:49.888556",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.010003",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.133349",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.257812",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.378565",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.500651",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.620709",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.744634",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.864218",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:50.986804",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.108651",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.254796",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.375967",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.496571",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.624044",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-04T09:16:51.750139",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:10.852079",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:10.953838",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.024429",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.096399",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.173946",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.247180",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.321229",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.396663",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.471091",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.543332",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.619438",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.691007",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.763288",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.840177",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.913535",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:11.985111",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:12.059200",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:12.130191",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:12.201022",
-      "signal": "BUY",
-      "profit": -28.44,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
-    {
-      "time": "2026-10-05T09:57:12.275934",
-      "signal": "BUY",
-      "profit": 71.1,
-      "strategy": "RSI=100.0 MACD bullish"
-    },
     {
       "time": "2026-10-05T13:31:48.152079",
       "signal": "BUY",
@@ -6008,6 +5288,726 @@
       "time": "2026-11-12T10:35:31.734453",
       "signal": "BUY",
       "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:02.927318",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.067235",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.194943",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.326069",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.451524",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.578917",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.702929",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.828099",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:03.951517",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.077369",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.201252",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.327393",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.453947",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.577603",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.703094",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.827061",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:04.949677",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:05.073236",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:05.200680",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-13T10:28:05.327580",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.498879",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.588218",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.673426",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.758618",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.844813",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:11.933287",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.020909",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.107675",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.193350",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.278074",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.363408",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.449204",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.534836",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.620696",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.706654",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.792356",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.877484",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:12.962925",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:13.050823",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-14T09:46:13.139128",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:52.971709",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.047423",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.119604",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.193708",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.262739",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.337030",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.406225",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.475606",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.546684",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.626090",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.695161",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.766766",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.835434",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.904596",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:53.977944",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:54.048416",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:54.116924",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:54.185943",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:54.260364",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-15T10:19:54.329275",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:38.981884",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.077723",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.162775",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.247175",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.331585",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.418518",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.504244",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.590020",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.675025",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.760029",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.844793",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:39.930239",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.015507",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.100224",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.184895",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.270203",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.355442",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.440498",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.528625",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T10:34:40.613865",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:20.820994",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:20.957689",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.088165",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.214295",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.337147",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.471959",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.600716",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.740962",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:21.873040",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.001543",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.133690",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.263199",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.391397",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.525379",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.663947",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.799463",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:22.930708",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:23.070946",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:23.206865",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-16T14:42:23.339023",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:31.850917",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:31.938755",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.025869",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.108885",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.191957",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.276541",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.360275",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.443594",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.528721",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.612312",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.695845",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.785107",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.869276",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:32.952870",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.036542",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.125655",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.209296",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.293265",
+      "signal": "BUY",
+      "profit": -28.44,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.379686",
+      "signal": "BUY",
+      "profit": 71.1,
+      "strategy": "RSI=100.0 MACD bullish"
+    },
+    {
+      "time": "2026-11-17T11:26:33.463562",
+      "signal": "BUY",
+      "profit": 71.1,
       "strategy": "RSI=100.0 MACD bullish"
     }
   ]
