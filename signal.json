@@ -1,9 +1,15 @@
 {
-  "signal": "NONE",
-  "confidence": 0,
+  "signal": "SELL",
+  "confidence": 0.8,
+  "votes": 4,
+  "reason": "Breakout support 3732.60",
   "organism_id": "organism_016",
+  "lot": 0.0182,
+  "sl_points": 180,
+  "tp_ratio": 2.5,
+  "timestamp": "2026-11-19T08:36:48.779733",
   "symbol": "XAUUSD",
   "session": "Asia",
-  "generated_at": "2026-11-19T01:03:49.684285",
+  "generated_at": "2026-11-19T08:36:48.779791",
   "valid_seconds": 65
 }
